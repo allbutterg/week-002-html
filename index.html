@@ -1,15 +1,18 @@
 <html>
-    <head>
-        To Do Organiser <!--Text that will appear on Browser Tab-->
-    </head>
 
-    <body>
+<head>
+    To Do Organiser
+    <!--Text that will appear on Browser Tab-->
+</head>
 
-        <h1>OH TO-DO! We've got 3 <!--this number is dynamic, based on number of
+<body>
+
+    <h1>OH TO-DO! We've got 3
+        <!--this number is dynamic, based on number of
             task the user creates-->tasks to do...</h1>
-        <div>
-        
-            <!--FORM FOR NEW TASK
+    <div>
+
+        <!--FORM FOR NEW TASK
             
             1. Input new task: Text field <input type="text"... >
             2. Declare a category for task: Text field <input type="text"... >
@@ -18,20 +21,31 @@
             5. Add (Submit) button <button type="submit">...</button>
             -->
 
-        </div>
+        <form>
+            <div>
+                <label for="newTask">New Task:</label>
+                <input type="text" name="newTask" id="newTask" required>
+            </div>
 
-        <div>
-            <h2>My Task List:</h2>
 
-            <!--Task List, by Row
+
+        </form>
+
+    </div>
+
+    <div>
+        <h2>My Task List:</h2>
+
+        <!--Task List, by Row
             Column 1: Name of tasks ++
             Column 2: Update/Edit button ++ (for each row)
             Column 3: Delete button ++
             Column 4: Done/Submit button ++
             -->
 
-        </div>
+    </div>
 
 
-    </body>
+</body>
+
 </html>
