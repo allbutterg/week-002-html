@@ -1,0 +1,6 @@
+Number of tasks listed to do in the top header that says 'We've got X tasks to do...'
+The content (task, category, priority level, desired completion date) that the user will enter into the form
+The defined categories and list of relevant tasks that will be displayed on the page
+Being able to go back and edit what the task listed is, by use of an 'Update' button
+Being able to delete a task listed
+Being able to signify that a task has been completed, by use of a 'Done' button
