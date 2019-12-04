@@ -4,3 +4,4 @@ The defined categories and list of relevant tasks that will be displayed on the 
 Being able to go back and edit what the task listed is, by use of an 'Update' button
 Being able to delete a task listed
 Being able to signify that a task has been completed, by use of a 'Done' button
+Task (what it is, its completion date, category and priority level) becomes editable in-situ (e.g. the task instruction turns into an editable text box) when the user presses 'Update', changing it from a read-only list
