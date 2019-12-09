@@ -1,8 +1,11 @@
-<html>
+<!DOCTYPE html>
 
 <head>
-    To Do Organiser
-    <!--Text that will appear on Browser Tab-->
+    <title>
+        To Do Organiser
+        <!--Text that will appear on Browser Tab-->
+    </title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
@@ -10,9 +13,9 @@
     <h1>OH TO-DO! We've got 3
         <!--this number is dynamic, based on number of
             task the user creates-->tasks to do...</h1>
-    <div>
 
-        <!--FORM FOR NEW TASK
+
+    <!--FORM FOR NEW TASK
             
             1. Input new task: Text field <input type="text"... >
             2. Declare a category for task: Text field <input type="text"... >
@@ -21,34 +24,36 @@
             5. Add (Submit) button <button type="submit">...</button>
             -->
 
-        <form>
-            <div>
-                <label for="newTask">New Task:</label>
-                <input type="text" name="newTask" id="newTask" required>
+    <form>
+        <div class="box">
 
-                <label for="categoryTask">Category:</label>
-                <input type="text" name="categoryTask" id="categoryTask">
+            <label for="newTask">New Task:</label>
+            <input type="text" name="newTask" id="newTask" required>
 
-
-                <label for="priority">Priority:</label>
-                <select name="priority" id="priority" style="width: 25px">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select>
+            <label for="categoryTask">Category:</label>
+            <input type="text" name="categoryTask" id="categoryTask">
 
 
+            <label for="priority">Priority:</label>
+            <select name="priority" id="priority" style="width: 25px">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
 
-                <label for="completeBy">Complete By:</label>
-                <input type="date" name="completeBy" id="completeBy">
 
 
-                <button type="submit">Add</button>
+            <label for="completeBy">Complete By:</label>
+            <input type="date" name="completeBy" id="completeBy">
 
 
-        </form>
+            <button type="submit">Add</button>
 
-    </div>
+
+
+        </div>
+    </form>
+
 
     <!--Task List, by Row
             Column 1: Name of tasks ++
@@ -60,77 +65,93 @@
     <div>
         <h2>My Task List:</h2>
 
+        <div/>
+
         <div>
 
-                <table style="width:50%" align="left">
 
-                    <tr align="left">
-                        <th><h3>Personal</h3>Task</th> <!-- Where name of master 'category' of tasks would be listed, with relevant tasks rendered beneath -->
-                        <th><h3><br></h3>Complete By</th>
-                        <th></th> <!-- Where Update button will be found -->
-                        <th></th> <!-- Where Delete button will be found -->
-                        <th></th> <!-- Where Done button will be found-->
-                    </tr>
-                    <tr>
-                        <td>Example Task 1 &emsp;&emsp;&emsp;</td>
-                        <td>XX XX XX</td>
-                        <td><button type="button">Update</button></td>
-                        <td> <button type="button">Delete</button></td>
-                        <td> <button type="button">Done</button></td>
-                    </tr>
-                    <tr>
-                        <td>Example Task 2 &emsp;&emsp;&emsp;</td>
-                        <td>XX XX XX</td>
-                        <td><button type="button">Update</button></td>
-                        <td> <button type="button">Delete</button></td>
-                        <td> <button type="button">Done</button></td>
-                    </tr>
-                    <tr>
-                        <td>Example Task 3 &emsp;&emsp;&emsp;</td>
-                        <td>XX XX XX</td>
-                        <td><button type="button">Update</button></td>
-                        <td> <button type="button">Delete</button></td>
-                        <td> <button type="button">Done</button></td>
-                    </tr>
+            <table style="width:50%" align="right" class="taskBoxMore">
 
-                </table>
+                <tr align="left">
+                    <th>
+                        <h3>Work</h3>Task
+                    </th> <!-- Where tasks will be rendered beneath-->
+                    <th>
+                        <h3><br></h3>Complete By
+                    </th>
+                    <th></th> <!-- Where Update button will be found -->
+                    <th></th> <!-- Where Delete button will be found -->
+                    <th></th> <!-- Where Done button will be found-->
+                </tr>
+                <tr>
+                    <td>Example Task @ Priority 1 &emsp;&emsp;&emsp;</td>
+                    <td>XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
+                <tr>
+                    <td>Example Task @ Priority 3 &emsp;&emsp;&emsp;</td>
+                    <td>XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
+                <tr>
+                    <td>Example Task @ Priority 3 &emsp;&emsp;&emsp;</td>
+                    <td>XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
 
-
-                <table style="width:50%" align="right">
-
-                    <tr align="left">
-                        <th><h3>Work</h3>Task</th> <!-- Where tasks will be rendered beneath-->
-                        <th><h3><br></h3>Complete By</th>
-                        <th></th> <!-- Where Update button will be found -->
-                        <th></th> <!-- Where Delete button will be found -->
-                        <th></th> <!-- Where Done button will be found-->
-                    </tr>
-                    <tr>
-                        <td>Example Task 1 &emsp;&emsp;&emsp;</td>
-                        <td>XX XX XX</td>
-                        <td><button type="button">Update</button></td>
-                        <td> <button type="button">Delete</button></td>
-                        <td> <button type="button">Done</button></td>
-                    </tr>
-                    <tr>
-                        <td>Example Task 2 &emsp;&emsp;&emsp;</td>
-                        <td>XX XX XX</td>
-                        <td><button type="button">Update</button></td>
-                        <td> <button type="button">Delete</button></td>
-                        <td> <button type="button">Done</button></td>
-                    </tr>
-                    <tr>
-                        <td>Example Task 3 &emsp;&emsp;&emsp;</td>
-                        <td>XX XX XX</td>
-                        <td><button type="button">Update</button></td>
-                        <td> <button type="button">Delete</button></td>
-                        <td> <button type="button">Done</button></td>
-                    </tr>
-
-                </table>
+            </table>
 
 
-            </div>
+        </div>
+
+        <div>
+            <table style="width:50%" align="left" class="taskBox">
+
+
+                <tr align="left">
+                    <th>
+                        <h3>Personal</h3>Task
+                    </th>
+                    <!-- Where name of master 'category' of tasks would be listed, with relevant tasks rendered beneath -->
+                    <th>
+                        <h3><br></h3>Complete By
+                    </th>
+                    <th></th> <!-- Where Update button will be found -->
+                    <th></th> <!-- Where Delete button will be found -->
+                    <th></th> <!-- Where Done button will be found-->
+                </tr>
+                <tr>
+                    <td>Example Task @ Priority 1 &emsp;&emsp;&emsp;</td>
+                    <td>XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
+                <tr>
+                    <td>Example Task @ Priority 1 &emsp;&emsp;&emsp;</td>
+                    <td>XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
+                <tr>
+                    <td>Example Task @ Priority 2 &emsp;&emsp;&emsp;</td>
+                    <td>XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
+
+            </table>
+        </div>
+
+
 
 </body>
 
