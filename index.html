@@ -6,13 +6,19 @@
         <!--Text that will appear on Browser Tab-->
     </title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 
 <body>
 
-    <h1>OH TO-DO! We've got 3
-        <!--this number is dynamic, based on number of
+    <div class="typewriter">
+
+        <h1>OH TODO! We've got 3
+            <!--this number is dynamic, based on number of
             task the user creates-->tasks to do...</h1>
+
+    </div>
+    <br>
 
 
     <!--FORM FOR NEW TASK
@@ -49,8 +55,6 @@
 
             <button type="submit">Add</button>
 
-
-
         </div>
     </form>
 
@@ -65,93 +69,158 @@
     <div>
         <h2>My Task List:</h2>
 
-        <div/>
+    </div>
 
-        <div>
+    <div>
 
 
-            <table style="width:50%" align="right" class="taskBoxMore">
-
-                <tr align="left">
-                    <th>
-                        <h3>Work</h3>Task
-                    </th> <!-- Where tasks will be rendered beneath-->
-                    <th>
-                        <h3><br></h3>Complete By
+        <table style="width:50%" class="taskBoxMore">
+            <thead>
+                <tr>
+                    <th colspan="5">
+                        <h3>Work</h3>
                     </th>
-                    <th></th> <!-- Where Update button will be found -->
-                    <th></th> <!-- Where Delete button will be found -->
-                    <th></th> <!-- Where Done button will be found-->
                 </tr>
                 <tr>
-                    <td class="taskEntry">Example Task @ Priority 1 &emsp;&emsp;&emsp;</td>
-                    <td>XX XX XX</td>
+                    <th colspan="1">Task</th>
+                    <th colspan="1">Complete By</th>
+                    <th colspan="1"><i class="far fa-edit"></i></th>
+                    <th colspan="1"><i class="far fa-trash-alt"></i></th>
+                    <th colspan="1"><i class="far fa-paper-plane"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="taskEntry">Scroll Down to See More Tasks</td>
+                    <td class="goalDate">XX XX XX</td>
                     <td><button type="button">Update</button></td>
                     <td> <button type="button">Delete</button></td>
                     <td> <button type="button">Done</button></td>
                 </tr>
                 <tr>
-                    <td class="taskEntry">Example Task @ Priority 3 &emsp;&emsp;&emsp;</td>
-                    <td>XX XX XX</td>
+                    <td class="taskEntry">Example Task @ Priority 1</td>
+                    <td class="goalDate">XX XX XX</td>
                     <td><button type="button">Update</button></td>
                     <td> <button type="button">Delete</button></td>
                     <td> <button type="button">Done</button></td>
                 </tr>
                 <tr>
-                    <td class="taskEntry">Example Task @ Priority 3 &emsp;&emsp;&emsp;</td>
-                    <td>XX XX XX</td>
+                    <td class="taskEntry">Example Task @ Priority 1</td>
+                    <td class="goalDate">XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
+                <tr>
+                    <td class="taskEntry">Example Task @ Priority 2</td>
+                    <td class="goalDate">XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
+                <tr>
+                    <td class="taskEntry">Example Task @ Priority 2</td>
+                    <td class="goalDate">XX XX XX</td>
                     <td><button type="button">Update</button></td>
                     <td> <button type="button">Delete</button></td>
                     <td> <button type="button">Done</button></td>
                 </tr>
 
-            </table>
+                <tr>
+                    <td class="taskEntry">Example Task @ Priority 3</td>
+                    <td class="goalDate">XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
+                <tr>
+                    <td class="taskEntry">Example Task @ Priority 3</td>
+                    <td class="goalDate">XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
+            </tbody>
+
+        </table>
 
 
-        </div>
+    </div>
 
-        <div>
-            <table style="width:50%" align="left" class="taskBox">
-
-
-                <tr align="left">
-                    <th>
-                        <h3>Personal</h3>Task
+    <div>
+        <table style="width:50%" class="taskBox">
+            <thead>
+                <tr>
+                    <th colspan="5">
+                        <h3>Personal</h3>
                     </th>
                     <!-- Where name of master 'category' of tasks would be listed, with relevant tasks rendered beneath -->
-                    <th>
-                        <h3><br></h3>Complete By
-                    </th>
-                    <th></th> <!-- Where Update button will be found -->
-                    <th></th> <!-- Where Delete button will be found -->
-                    <th></th> <!-- Where Done button will be found-->
                 </tr>
+
                 <tr>
-                    <td class="taskEntry">Example Task @ Priority 1 &emsp;&emsp;&emsp;</td>
-                    <td>XX XX XX</td>
+                    <th colspan="1">Task</th>
+                    <th colspan="1">Complete By</th>
+                    <th colspan="1"><i class="far fa-edit"></i></th> <!-- Where Update button will be found -->
+                    <th colspan="1"><i class="far fa-trash-alt"></i></th>
+                    <!-- Where Delete button will be found. 'Edit' labeled here to centre the header across all 3 columns. -->
+                    <th colspan="1"><i class="far fa-paper-plane"></i></th> <!-- Where Done button will be found-->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="taskEntry">Scroll Down to See More Tasks</td>
+                    <td class="goalDate">XX XX XX</td>
                     <td><button type="button">Update</button></td>
                     <td> <button type="button">Delete</button></td>
                     <td> <button type="button">Done</button></td>
                 </tr>
                 <tr>
-                    <td class="taskEntry">Example Task @ Priority 1 &emsp;&emsp;&emsp;</td>
-                    <td>XX XX XX</td>
+                    <td class="taskEntry">Example Task @ Priority 1</td>
+                    <td class="goalDate"> XX XX XX</td>
                     <td><button type="button">Update</button></td>
                     <td> <button type="button">Delete</button></td>
                     <td> <button type="button">Done</button></td>
                 </tr>
                 <tr>
-                    <td class="taskEntry">Example Task @ Priority 2 &emsp;&emsp;&emsp;</td>
-                    <td>XX XX XX</td>
+                    <td class="taskEntry">Example Task @ Priority 1</td>
+                    <td class="goalDate">XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
+                <tr>
+                    <td class="taskEntry">Example Task @ Priority 2</td>
+                    <td class="goalDate">XX XX XX</td>
                     <td><button type="button">Update</button></td>
                     <td> <button type="button">Delete</button></td>
                     <td> <button type="button">Done</button></td>
                 </tr>
 
-            </table>
-        </div>
+                <tr>
+                    <td class="taskEntry">Example Task @ Priority 2</td>
+                    <td class="goalDate">XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
 
-
+                <tr>
+                    <td class="taskEntry">Example Task @ Priority 3</td>
+                    <td class="goalDate">XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
+                <tr>
+                    <td class="taskEntry">Example Task @ Priority 3</td>
+                    <td class="goalDate">XX XX XX</td>
+                    <td><button type="button">Update</button></td>
+                    <td> <button type="button">Delete</button></td>
+                    <td> <button type="button">Done</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 

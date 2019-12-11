@@ -1,3 +1,5 @@
+/* Main body elements */
+
 body {
     background-color: #A082A0;
     cursor: default;
@@ -9,7 +11,12 @@ body {
     padding: 20px;
 }
 
+/* Had issue with the two boxes overlapping with each other */
+
 .taskBox {
+    width: 200px;
+    table-layout: fixed;
+    border-collapse: hidden;
     background-color: white;
     border-radius: 25px;
     padding: 20px;
@@ -17,19 +24,26 @@ body {
 }
 
 .taskBoxMore {
+    position: block;
+    position: relative;
+    float: right;
+    z-index: 0;
     background-color: white;
     border-radius: 25px;
     padding: 20px;
-    float: right;
+    height: 100px;
+    width: 50%;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 200; line-height: 26.4px;
 }
 
-h1, h2, h3  {
+
+h1, h2  {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
 }
 
 h3  {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+    color: #C8A2C8;
     cursor: auto;
 }
 
@@ -37,6 +51,89 @@ form  {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
 }
 
+
+/* Additional display and user interactivity of elements: */
+
+/* Had difficulty aligning all cells in the tables, as they automatically shifted around
+e.g. Header cells not in sync with the data cells below;
+unnecessary white space being built in;
+header title text wrapping in an unaesthetic way */
+
+.taskBox tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 200px;
+}
+
+.taskBox thead tr {
+    display: block;
+    
+}
+
+.taskBox th, td {
+    padding: 5px;
+    text-align:left;
+    width: 50%;
+}
+
+.taskBox th:nth-child(1),
+.taskBox td:nth-child(1) {
+    width: 40;
+}
+
+.taskBox th:nth-child(2),
+.taskBox td:nth-child(2) {
+    width: 15%;
+}
+
+.taskBox th:nth-child(3),
+.taskBox td:nth-child(3),
+.taskBox th:nth-child(4),
+.taskBox td:nth-child(4),
+.taskBox th:nth-child(5),
+.taskBox td:nth-child(5) {
+    width: 15%;
+}
+
+.taskBoxMore tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 200px;
+}
+
+
+.taskBoxMore thead tr {
+    display: block;
+    
+}
+
+.taskBoxMore th, td {
+    padding: 5px;
+    text-align:left;
+    width: 50%;
+}
+
+
+.taskBoxMore th:nth-child(1),
+.taskBoxMore td:nth-child(1) {
+    width: 40;
+}
+
+.taskBoxMore th:nth-child(2),
+.taskBoxMore td:nth-child(2) {
+    width: 15%;
+}
+
+.taskBoxMore th:nth-child(3),
+.taskBoxMore td:nth-child(3),
+.taskBoxMore th:nth-child(4),
+.taskBoxMore td:nth-child(4),
+.taskBoxMore th:nth-child(5),
+.taskBoxMore td:nth-child(5) {
+    width: 15%;
+}
 button {
     cursor: pointer;
 }
@@ -52,6 +149,43 @@ input {
 .taskEntry:hover {
     color: #C8A2C8;
 }
+
+.goalDate:hover {
+    color: #C8A2C8;
+}
+
+button:hover {
+    color: #C8A2C8;
+}
+
+.i {
+    font-size: 16px;
+}
+
+/* Additional aesthetics */
+
+.typewriter h1 { 
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 3 auto; /* Can turn to 0 to otherwise give a scrolling effect as the typing happens */
+    letter-spacing: .10em;
+    animation: 
+      typing 3.5s steps(30),
+      blink-caret .5s step-end; /* Unsure how to remove static cursor from remaining on the page after the animation event has finished */ */ */
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 50% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+  }
 
 /*font {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; 
