@@ -9,6 +9,7 @@ body {
     background-color: white;
     border-radius: 25px;
     padding: 20px;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
 }
 
 /* Had issue with the two boxes overlapping with each other */
@@ -48,6 +49,20 @@ h3  {
 }
 
 form  {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+}
+
+#taskForm  label {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 80%;
+    padding-bottom: 1.5rem;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+}
+
+#taskForm input, select {
+    margin-left: 1rem;
     font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
 }
 
