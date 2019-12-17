@@ -12,12 +12,13 @@ body {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
 }
 
-/* Had issue with the two boxes overlapping with each other */
+.taskLists {
+    display: flex;
+    align-items: stretch;
+}
 
 .taskBox {
-    width: 200px;
-    table-layout: fixed;
-    border-collapse: hidden;
+    width: 50%;
     background-color: white;
     border-radius: 25px;
     padding: 20px;
@@ -25,15 +26,14 @@ body {
 }
 
 .taskBoxMore {
+    width: 50%;
     position: block;
     position: relative;
-    float: right;
-    z-index: 0;
+   
     background-color: white;
     border-radius: 25px;
     padding: 20px;
-    height: 100px;
-    width: 50%;
+
     font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 200; line-height: 26.4px;
 }
 
@@ -52,19 +52,15 @@ form  {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
 }
 
-#taskForm  label {
+#taskForm {
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    width: 80%;
-    padding-bottom: 1.5rem;
+    align-items: center;
+ 
     font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
 }
 
-#taskForm input, select {
-    margin-left: 1rem;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
-}
+
+
 
 
 /* Additional display and user interactivity of elements: */
