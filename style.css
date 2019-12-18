@@ -12,6 +12,7 @@ body {
     font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
 }
 
+
 .taskLists {
     display: flex;
     align-items: stretch;
@@ -54,12 +55,35 @@ form  {
 
 #taskForm {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: 1.5rem;
  
     font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
 }
 
+label {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: left;
+    width: 200px;
+    line-height: 10px;
+    margin-bottom: 10px;
+  }
+  
+  input {
+    height: 20px;
+    flex: 0 0 100px;
+    margin-left: 10px;
+  }
 
+  button {
+    height: 20px;
+    flex: 100 0 0;
+    margin-left: 10px;
+  }
 
 
 
