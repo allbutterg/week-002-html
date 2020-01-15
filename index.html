@@ -2,7 +2,7 @@
 <html lang="en" name="viewpoint" content="width=device-width, initial-scale=1">
 
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" name="viewport" content="width=900px, initial-scale=1">
     <title>
         To Do Organiser
         <!--Text that will appear on Browser Tab-->
@@ -16,60 +16,46 @@
 
 <body>
 
+
+
+
+
     <div class="container">
         <!-- overall page Container -->
-        <div class="row">
-            <!-- first Row for header -->
-            <div class="typewriter">
-                <div class="col-xs-12">
-                    <h1>OH TODO! We've got 3 tasks to do...</h1>
-                </div>
-                <!--this number is dynamic, based on number of
-            task the user creates-->
-            </div>
+        <br>
+        <div class="row typewriter col-lg-12">
+            <h1>OH TODO! We've got 3 tasks to do...</h1>
         </div>
+        <!--this number is dynamic, based on number of
+            task the user creates-->
         <br>
 
-        <div class="box">
+        <div class="box row col-lg-5">
 
-            <form class="form-vertical" id="taskForm">
-                <!-- 2nd Row for task input form -->
-
-
-                <!--FORM FOR NEW TASK
-            
-            1. Input new task: Text field <input type="text"... >
-            2. Declare a category for task: Text field <input type="text"... >
-            3. Specify a priority level: <option label="1" value="1" ... ></option>
-            4. Specify a target date to complete by: <input type="date"... >
-            5. Add (Submit) button <button type="submit">...</button>
-            -->
-
-            <!-- Bootstrap week: Had difficulty with aligning all fields in the form
-            e.g. the Priority field is somehow not aligning with the other inputs -->
-
+            <form id="taskForm">
                 <div class="form-group row">
-                        <label for="newTask" class="col-xs-3 col-form-label-xs">New Task:</label>
-    
-                        <div class="col-xs-9">
-                        <input type="text" class="form-control" name="newTask" id="newTask" placeholder="What's next to do?" required>
-                    </div>
-                </div>
-    
-                <div class="form-group row">
-                        <label for="categoryTask" class="col-xs-2 col-form-label-xs">Category:</label>
-                        <div class="col-xs-10">
-                        <input type="text" class="form-control" name="categoryTask" id="categoryTask" placeholder="Work? Personal?">
+                    
+                    <label for="newTask" class="col-lg-5 col-form-label-lg">New Task:</label>
+
+                    <div class="col-lg-7">
+                        <input type="text" class="form-control" name="newTask" id="newTask"
+                            placeholder="What's next to do?" required>
                     </div>
                 </div>
 
-
+                <div class="form-group row">
+                    <label for="categoryTask" class="col-lg-5 col-form-label-lg">Category:</label>
+                    <div class="col-lg-7">
+                        <input type="text" class="form-control" name="categoryTask" id="categoryTask"
+                            placeholder="Work? Personal?">
+                    </div>
+                </div>
 
                 <div class="form-group row">
 
-                        <label for="priority" class="col-xs-2 col-form-label-xs">Priority:</label>
-                       <div class="col-xs-10">
-                        <select class="form-control"  name="priority" id="priority" style="width: 40px">
+                    <label for="priority" class="col-lg-5 col-form-label-lg">Priority:</label>
+                    <div class="col-lg-3">
+                        <select class="form-control" name="priority" id="priority" style="width: 40px">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -78,435 +64,395 @@
                 </div>
 
                 <div class="form-group row">
-                
-                        <label for="completeBy" class="col-xs-2 col-form-label-xs">Complete By:</label>
-                        <div class="col-xs-10">
-                        <input type="date" class="form-control"  name="completeBy" id="completeBy">
+
+                    <label for="completeBy" class="col-lg-5 col-form-label-lg">Complete By:</label>
+                    <div class="col-lg-7">
+                        <input type="date" class="form-control" name="completeBy" id="completeBy">
 
                     </div>
                 </div>
 
+
                 <div class="form-group row">
-                    <div class="col-xs-10">
+
+                    <div class="col-lg-5">
                         <button type="submit" class="form-control">Add</button>
                     </div>
 
                 </div>
+
 
             </form>
         </div>
 
 
 
-        <!--Task List, by Row
-            Column 1: Name of tasks ++
-            Column 2: Update/Edit button ++ (for each row)
-            Column 3: Delete button ++
-            Column 4: Done/Submit button ++
-            -->
-
-
-            <!-- Boostrap week: had difficulty with making the 'div' table act like a table - alignment issues.
-            Can I still use the Bootstrap table function, or is the idea that this can be done without tables at all?-->
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div>
-                        <h2>My Task List:</h2>
-
-                    </div>
-
-                </div>
-            </div>
+        <!--Task List-->
+        <br>
+        <div class="row col-lg-12">
+            <h2>My Task List:</h2>
         </div>
+        <br>
+        <div class="row col-lg-12 flex-wrap">
 
-        <div class="container">
+            <div class="box row col-lg-5">
 
-            <div class="taskLists">
-                <div class="taskBox">
-
-                    <div class="col-xs-12">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h3>Work</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-
-                            <div class="col-xs-5">
-                                <div>Task</div>
-                            </div>
-                            <div class="col-xs-4">
-                                <div>Complete By</div>
-                            </div>
-                            <div class="col-xs-1">
-                                <div><i class="far fa-edit"></i></div>
-                                </div>
-                            <div class="col-xs-1">
-                                <div><i class="far fa-trash-alt"></i></div>
-                            </div>
-                            <div class="col-xs-1">
-                                <div><i class="far fa-paper-plane"></i></div>
-                        </div>
-                    </div>
-
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Scroll Down to See More Tasks</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Example Task @ Priority 1</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Example Task @ Priority 1</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Example Task @ Priority 2</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Example Task @ Priority 2</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Example Task @ Priority 3</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Example Task @ Priority 3</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-                    </div>
-
+                <div class="row col-12"></div>
+                <div class="col-3 taskTitle">Personal</div>
+                <div class="col-9">
+                    <button type="button">Update <i class="far fa-edit"></i></button> <button type="button">Delete <i
+                            class="far fa-trash-alt"></i></button> <button type="button">Done <i
+                            class="far fa-paper-plane"></i></button>
                 </div>
+    
 
-                <!-- the next category task list: -->
-
-                <div class="taskBoxMore">
-                    <div class="col-xs-12">
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <h3>Personal</h3>
-                            </div>
-                        </div>
-                        <div class="row">
-
-                            <div class="col-xs-5">Task</div>
-                            <div class="col-xs-4">Complete By</div>
-                            <div class="col-xs-1"><i class="far fa-edit"></i></div>
-                            <div class="col-xs-1"><i class="far fa-trash-alt"></i></div>
-                            <div class="col-xs-1"><i class="far fa-paper-plane"></i></div>
-
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Scroll Down to See More Tasks</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Example Task @ Priority 1</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Example Task @ Priority 2</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Example Task @ Priority 3</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Example Task @ Priority 3</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Example Task @ Priority 3</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xs-5">
-                                <div class="taskEntry">Example Task @ Priority 3</div>
-                            </div>
-
-                            <div class="col-xs-4">
-                                <div class="goalDate">XX XX XX</div>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Update</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Delete</button>
-                            </div>
-
-                            <div class="col-xs-1">
-                                <button type="button">Done</button>
-                            </div>
-
-                        </div>
-
-                    </div>
-
+            <!-- <div class="row col-12">
+                <div class="col-1"></div>
+                <div class="col-10">
+                    <button type="button">Update <i class="far fa-edit"></i></button> <button type="button">Delete <i
+                            class="far fa-trash-alt"></i></button> <button type="button">Done <i
+                            class="far fa-paper-plane"></i></button>
                 </div>
+                <div class="col-1"></div>
+            </div> -->
+
+            <div class="row col-12">
+                <div class="row col-7 taskHeader">
+                    Task
+                </div>
+                <div class="col-5 taskHeader">
+                    Complete By
+                </div>
+            </div>
+
+
+
+            <div class="row col-12">
+                <div class="col-7 taskEntry">Example Task @ Priority 1</div>
+                <div class="col-5 goalDate">XX XX XX</div>
+
+
+                <div class="col-7 taskEntry">Example Task @ Priority 2</div>
+                <div class="col-5 goalDate">XX XX XX</div>
+
+                <div class="col-7 taskEntry">Example Task @ Priority 3</div>
+                <div class="col-5 goalDate">XX XX XX</div>
+
 
             </div>
+
+        </div>
+   
+
+        <!-- <div class="col-lg-1"></div> -->
+
+        <div class="box row col-lg-5">
+            
+                <div class="row col-12"></div>
+                <div class="col-3 taskTitle">Work</div>
+                <div class="col-9">
+                    <button type="button">Update <i class="far fa-edit"></i></button> <button type="button">Delete <i
+                            class="far fa-trash-alt"></i></button> <button type="button">Done <i
+                            class="far fa-paper-plane"></i></button>
+                </div>
+
+            <div class="row col-12 taskHeader">
+                <div class="row col-7">
+                    Task
+                </div>
+                <div class="col-5">
+                    Complete By
+                </div>
+            </div>
+
+
+
+            <div class="row col-12">
+                <div class="col-7 taskEntry">Example Task @ Priority 1</div>
+                <div class="col-5 goalDate">XX XX XX</div>
+
+
+                <div class="col-7 taskEntry">Example Task @ Priority 2</div>
+                <div class="col-5 goalDate">XX XX XX</div>
+
+                <div class="col-7 taskEntry">Example Task @ Priority 3</div>
+                <div class="col-5 goalDate">XX XX XX</div>
+
+
+            </div>
+
         </div>
 
     </div>
+
+
+
+    <!-- <div class="taskLists col-xs-12 col-md-12 flex-wrap">
+                    <div class="taskBox">
+
+                        <div class="col-xs-12">
+                            <div class="row">
+
+                                <h3>Work</h3>
+
+                            </div>
+                            <div class="row">
+
+                                <span>Task</span>
+
+                                <span>Complete By</span>
+
+
+                                <span><i class="far fa-edit"></i></span>
+
+
+                                <span><i class="far fa-trash-alt"></i></span>
+
+
+                                <span><i class="far fa-paper-plane"></i></>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <div class="taskEntry">Example Task @ Priority 1</div>
+                            </div>
+
+                            <div class="col-xs-4">
+                                <div class="goalDate">XX XX XX</div>
+                            </div>
+
+                            <div class="col-xs-1">
+                                <button type="button">Update</button>
+                            </div>
+
+                            <div class="col-xs-1">
+                                <button type="button">Delete</button>
+                            </div>
+
+                            <div class="col-xs-1">
+                                <button type="button">Done</button>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <div class="taskEntry">Example Task @ Priority 2</div>
+                            </div>
+
+                            <div class="col-xs-4">
+                                <div class="goalDate">XX XX XX</div>
+                            </div>
+
+                            <div class="col-xs-1">
+                                <button type="button">Update</button>
+                            </div>
+
+                            <div class="col-xs-1">
+                                <button type="button">Delete</button>
+                            </div>
+
+                            <div class="col-xs-1">
+                                <button type="button">Done</button>
+                            </div>
+
+                        </div>
+
+
+
+                    </div> -->
+
+
+
+    <!-- the next category task list: -->
+
+    <!-- <div class="taskBoxMore">
+                        <div class="col-xs-12">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <h3>Personal</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-xs-5">Task</div>
+                                <div class="col-xs-4">Complete By</div>
+                                <div class="col-xs-1"><i class="far fa-edit"></i></div>
+                                <div class="col-xs-1"><i class="far fa-trash-alt"></i></div>
+                                <div class="col-xs-1"><i class="far fa-paper-plane"></i></div>
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <div class="taskEntry">Scroll Down to See More Tasks</div>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <div class="goalDate">XX XX XX</div>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Update</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Delete</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Done</button>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <div class="taskEntry">Example Task @ Priority 1</div>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <div class="goalDate">XX XX XX</div>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Update</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Delete</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Done</button>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <div class="taskEntry">Example Task @ Priority 2</div>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <div class="goalDate">XX XX XX</div>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Update</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Delete</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Done</button>
+                                </div>
+
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <div class="taskEntry">Example Task @ Priority 3</div>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <div class="goalDate">XX XX XX</div>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Update</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Delete</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Done</button>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <div class="taskEntry">Example Task @ Priority 3</div>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <div class="goalDate">XX XX XX</div>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Update</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Delete</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Done</button>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <div class="taskEntry">Example Task @ Priority 3</div>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <div class="goalDate">XX XX XX</div>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Update</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Delete</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Done</button>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-xs-5">
+                                    <div class="taskEntry">Example Task @ Priority 3</div>
+                                </div>
+
+                                <div class="col-xs-4">
+                                    <div class="goalDate">XX XX XX</div>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Update</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Delete</button>
+                                </div>
+
+                                <div class="col-xs-1">
+                                    <button type="button">Done</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div> -->
+
+
 
 </body>
 

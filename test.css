@@ -1,0 +1,56 @@
+
+h1 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+}
+
+h3 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+}
+
+.p1 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+}
+
+.p2 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 10px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+}
+
+.box {
+    display: flex;
+    background-color: yellow;
+    border-radius: 25px;
+    padding: 20px;
+    font-family: Futur
+
+}
+    
+.borderless td {
+    border: none;
+}
+
+.borderless th {
+    border: none;
+}
+
+.typewriter h1 { 
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 3 auto; /* Can turn to 0 to otherwise give a scrolling effect as the typing happens */
+    letter-spacing: .10em;
+    animation: 
+      typing 3.5s steps(30),
+      blink-caret .5s step-end; /* Unsure how to remove static cursor from remaining on the page after the animation event has finished */ */ */
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 50% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white }
+  }

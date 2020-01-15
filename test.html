@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="test.css" />
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <title>To Do Organiser</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <br>
+        <div class="row typewriter"><h1>OH TODO! We've got 3 tasks to do...</h1></div>
+        <br>
+        <div class="box row col-lg-5">
+
+            <form id="taskForm">
+                <div class="form-group row">
+                    <label for="newTask" class="col-lg-5 col-form-label-lg">New Task:</label>
+
+                    <div class="col-lg-7">
+                        <input type="text" class="form-control" name="newTask" id="newTask"
+                            placeholder="What's next to do?" required>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+                    <label for="categoryTask" class="col-lg-5 col-form-label-lg">Category:</label>
+                    <div class="col-lg-7">
+                        <input type="text" class="form-control" name="categoryTask" id="categoryTask"
+                            placeholder="Work? Personal?">
+                    </div>
+                </div>
+
+                <div class="form-group row">
+
+                    <label for="priority" class="col-lg-5 col-form-label-lg">Priority:</label>
+                    <div class="col-lg-3">
+                        <select class="form-control" name="priority" id="priority" style="width: 40px">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group row">
+
+                    <label for="completeBy" class="col-lg-5 col-form-label-lg">Complete By:</label>
+                    <div class="col-lg-7">
+                        <input type="date" class="form-control" name="completeBy" id="completeBy">
+
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+
+                    <div class="col-lg-5">
+                        <button type="submit" class="form-control">Add</button>
+                    </div>
+
+
+                </div>
+
+            </form>
+        </div>
+
+
+
+        <div class="row col-lg-12">
+            <h1>My Task List:</h1>
+        </div>
+
+        <div class="row col-lg-12  flex-wrap">
+
+            <div class="box row col-lg-5 col-md-12">
+                    <div class="col-lg-12">
+                      Personal
+                      <div class="row">
+                            <div class="col-lg-8"></div>
+                            <div class="col-lg-4">
+                                    Edit Delete Done
+                                </div>
+                        <div class="col-lg-8">
+                          Task
+                        </div>
+                        <div class="col-lg-4">
+                          Complete By
+                        </div>
+                    
+                
+                      </div>
+
+                      <div class="row">
+                          <div class="col-lg-8">Example Task @ Priority 1</div>
+                          <div class="col-lg-4">XX XX XX</div>
+                   
+                            <div class="col-lg-8">Example Task @ Priority 2</div>
+                            <div class="col-lg-4">XX XX XX</div>
+                     
+                            <div class="col-lg-8">Example Task @ Priority 3</div>
+                            <div class="col-lg-4">XX XX XX</div>
+                      </div>
+                  </div>
+                    
+                </div>
+                <div class="col-lg-1 col-md-0"></div>
+          
+                <div class="box row col-lg-5 col-md-12">
+                        <div class="col-lg-12">
+                          <h3>Work</h3>
+                          <div class="row">
+                                <div class="col-lg-8"></div>
+                                <div class="col-lg-4">
+                                    Edit Delete Done
+                                    </div>
+                            <div class="col-lg-8">
+                              Task
+                            </div>
+                            <div class="col-lg-4">
+                              Complete By
+                            </div>
+                        
+                    
+                          </div>
+    
+                          <div class="row">
+                              <div class="col-lg-8">Example Task @ Priority 1</div>
+                              <div class="col-lg-4">XX XX XX</div>
+                        
+                                <div class="col-lg-8">Example Task @ Priority 3</div>
+                                <div class="col-lg-4">XX XX XX</div>
+                          
+                                <div class="col-lg-8">Example Task @ Priority 3</div>
+                                <div class="col-lg-4">XX XX XX</div>
+                          </div>
+                      </div>
+                        
+                    </div>
+
+    </div>
+
+    </div>
+
+
+</body>
+
+</html>

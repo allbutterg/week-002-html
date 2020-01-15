@@ -1,56 +1,18 @@
-/* Main body elements */
+/* Page components */
 
 body {
     background-color: #A082A0;
     cursor: default;
 }
 
+
 .box {
-    background-color: white;
-    border-radius: 25px;
-    padding: 20px;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
-}
-
-
-.taskLists {
     display: flex;
-    align-items: stretch;
-}
-
-.taskBox {
-    width: 50%;
     background-color: white;
     border-radius: 25px;
     padding: 20px;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 00; line-height: 26.4px;
-}
-
-.taskBoxMore {
-    width: 50%;
-    position: block;
-    position: relative;
-   
-    background-color: white;
-    border-radius: 25px;
-    padding: 20px;
-
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 200; line-height: 26.4px;
-}
-
-
-h1, h2  {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
-}
-
-h3  {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
-    color: #C8A2C8;
-    cursor: auto;
-}
-
-form  {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+    margin: 10px;
+    text-align: left;
 }
 
 #taskForm {
@@ -59,8 +21,35 @@ form  {
     justify-content: space-between;
     width: 80%;
     margin-left: 1.5rem;
- 
     font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+}
+
+  button {
+    display: inline-block;
+    height: 30px;
+    flex: 100 0 0;
+    margin: 10px 0 0 10px;
+    border-radius: 25px;
+    background-color: white;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 12px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+    cursor: pointer;
+}
+
+/* Text, fonts and icons */
+
+h1 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+    overflow: auto;
+}
+
+h2 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 22px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+
+}
+
+h3 {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+    color: #C8A2C8;
 }
 
 label {
@@ -71,135 +60,45 @@ label {
     width: 200px;
     line-height: 10px;
     margin-bottom: 10px;
-  }
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+}
   
   input {
     height: 20px;
     flex: 0 0 100px;
     margin-left: 10px;
-  }
-
-  button {
-    height: 20px;
-    flex: 100 0 0;
-    margin-left: 10px;
-  }
-
-
-
-/* Additional display and user interactivity of elements: */
-
-/* Had difficulty aligning all cells in the tables, as they automatically shifted around
-e.g. Header cells not in sync with the data cells below;
-unnecessary white space being built in;
-header title text wrapping in an unaesthetic way */
-
-.taskBox tbody {
-    display: block;
-    width: 100%;
-    overflow: auto;
-    height: 200px;
-}
-
-.taskBox thead tr {
-    display: block;
-    
-}
-
-.taskBox th, td {
-    padding: 5px;
-    text-align:left;
-    width: 50%;
-}
-
-.taskBox th:nth-child(1),
-.taskBox td:nth-child(1) {
-    width: 40;
-}
-
-.taskBox th:nth-child(2),
-.taskBox td:nth-child(2) {
-    width: 15%;
-}
-
-.taskBox th:nth-child(3),
-.taskBox td:nth-child(3),
-.taskBox th:nth-child(4),
-.taskBox td:nth-child(4),
-.taskBox th:nth-child(5),
-.taskBox td:nth-child(5) {
-    width: 15%;
-}
-
-.taskBoxMore tbody {
-    display: block;
-    width: 100%;
-    overflow: auto;
-    height: 200px;
-}
-
-
-.taskBoxMore thead tr {
-    display: block;
-    
-}
-
-.taskBoxMore th, td {
-    padding: 5px;
-    text-align:left;
-    width: 50%;
-}
-
-
-.taskBoxMore th:nth-child(1),
-.taskBoxMore td:nth-child(1) {
-    width: 40;
-}
-
-.taskBoxMore th:nth-child(2),
-.taskBoxMore td:nth-child(2) {
-    width: 15%;
-}
-
-.taskBoxMore th:nth-child(3),
-.taskBoxMore td:nth-child(3),
-.taskBoxMore th:nth-child(4),
-.taskBoxMore td:nth-child(4),
-.taskBoxMore th:nth-child(5),
-.taskBoxMore td:nth-child(5) {
-    width: 15%;
-}
-button {
-    cursor: pointer;
-}
-
-input {
     cursor: text;
+  }
+
+.taskTitle {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+    color: #C8A2C8;
+    padding: 10px 0 0 0;
+}
+
+.taskHeader {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px;
+    padding: 20px;
+    color: #C8A2C8;
 }
 
 .taskEntry {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 26.4px;
     cursor: pointer;
 }
 
-.taskEntry:hover {
-    color: #C8A2C8;
-}
-
-.goalDate:hover {
-    color: #C8A2C8;
-}
-
-button:hover {
-    color: #C8A2C8;
+.goalDate {
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 500; line-height: 26.4px;
+    cursor: pointer;
 }
 
 .i {
     font-size: 16px;
 }
 
-/* Additional aesthetics */
+/* Dynamic elements */
 
-.typewriter h1 { 
+.typewriter h1 {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid white; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -207,21 +106,45 @@ button:hover {
     letter-spacing: .10em;
     animation: 
       typing 3.5s steps(30),
-      blink-caret .5s step-end; /* Unsure how to remove static cursor from remaining on the page after the animation event has finished */ */ */
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
+      blink-caret .5s step-end; /* Unsure how to remove static cursor from remaining on the page after the animation event has finished */
+} /*Typing effect:- */
+@keyframes typing {
     from { width: 0 }
     to { width: 50% }
-  }
-  
-  /* The typewriter cursor effect */
+  }/* The typewriter cursor effect :-*/
   @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: white }
   }
 
-/*font {
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; } h3 { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; } p { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; } blockquote { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; } pre { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; 
+button:hover {
+    color: #C8A2C8;
 }
+.taskEntry:hover {
+    cursor: pointer;
+    color: #C8A2C8;
+}
+
+.goalDate:hover {
+    color: #C8A2C8;
+}
+
+/* Media Queries for responsiveness */
+
+/* .column {
+    float: left;
+    width: 50%;
+  } */
+  
+  /* @media screen and (max-width: 1000px) {
+    .row {
+      [class="col-12"]
+    }
+  } */
+
+
+
+
+
+
+
